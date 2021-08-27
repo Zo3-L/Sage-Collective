@@ -11,14 +11,14 @@ export const Home = (props) => {
     <div>
       {!!username ? (
         <div className="homeMsg">
-          <h2>Welcome, {username}!</h2>
+          <h1>Welcome, {username}!</h1>
           <h4>
             <Link to="/chatroom">Access your community here</Link>
           </h4>
         </div>
       ) : (
         <div className="homeMsg">
-          <h2>Welcome!</h2>
+          <h1>Welcome!</h1>
           <h4>
             <Link to="/chatroom">Access your community here</Link>
           </h4>

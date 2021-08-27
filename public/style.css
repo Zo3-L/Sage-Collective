@@ -19,7 +19,7 @@ label {
 }
 
 nav a {
-  color: rgb(1, 86, 0);
+  color: rgb(210, 228, 203);
   text-decoration: none;
   display: inline-block;
   margin: 1em;
@@ -39,8 +39,8 @@ form div {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
-  background-image: url("https://unsplash.com/photos/3tGxWVuSRBk");
-  background: var(--light-color);
+  background-image: url("https://images.unsplash.com/photo-1621189458397-0cfe0f6984e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  /* background: var(--light-color); */
   margin: 20px;
 }
 
@@ -49,7 +49,7 @@ ul {
 }
 
 a {
-  color: rgb(1, 86, 0);
+  color: rgb(210, 228, 203);
   text-decoration: none;
 }
 
@@ -68,9 +68,21 @@ a {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  color: rgb(210, 228, 203);
+}
+
+#room,
+#username,
+#msg,
+#authInput {
+  background: rgb(210, 228, 203);
   color: rgb(1, 86, 0);
 }
 
+#authInfo {
+  font-family: "Raleway", sans-serif;
+  color: rgb(210, 228, 203);
+}
 /* Chat Page */
 
 .chat-container {
@@ -82,7 +94,7 @@ a {
 
 .chat-header {
   background: var(--dark-color-a);
-  color: #fff;
+  color: rgb(210, 228, 203);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 15px;
@@ -163,7 +175,7 @@ a {
 .join-container {
   max-width: 500px;
   margin: 80px auto;
-  color: #fff;
+  color: rgb(210, 228, 203);
 }
 
 .join-header {

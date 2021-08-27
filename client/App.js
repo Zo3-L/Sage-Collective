@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 
-import Navbar from './components/Navbar'
-import Routes from './Routes'
+import Navbar from "./components/Navbar";
+import Routes from "./Routes";
+import io from "socket.io-client";
 
 const App = () => {
   return (
@@ -9,7 +10,7 @@ const App = () => {
       <Navbar />
       <Routes />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

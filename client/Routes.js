@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import ChatRoom from "./components/ChatRoom";
 import Chat from "./components/Chat";
 import { me } from "./store";
+import Navbar from "./components/Navbar";
 
 /**
  * COMPONENT
@@ -29,7 +30,7 @@ class Routes extends Component {
         ) : (
           <Switch>
             <Route path="/home" component={Home} />
-            <Route path="/" exact component={Login} />
+            <Route path="/" exact component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
             <Route path="/chatroom" component={ChatRoom} />

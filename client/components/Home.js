@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import { Link } from "react-router-dom";
 /**
  * COMPONENT
  */
@@ -10,9 +10,19 @@ export const Home = (props) => {
   return (
     <div>
       {!!username ? (
-        <h3>Welcome to Sage Collective, {username}!</h3>
+        <div className="homeMsg">
+          <h2>Welcome, {username}!</h2>
+          <h4>
+            <Link to="/chatroom">Access your community here</Link>
+          </h4>
+        </div>
       ) : (
-        <h3>Welcome to Sage Collective!</h3>
+        <div className="homeMsg">
+          <h2>Welcome!</h2>
+          <h4>
+            <Link to="/chatroom">Access your community here</Link>
+          </h4>
+        </div>
       )}
     </div>
   );

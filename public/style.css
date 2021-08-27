@@ -1,16 +1,3 @@
-label {
-  display: block;
-}
-
-nav a {
-  display: inline-block;
-  margin: 1em;
-}
-
-form div {
-  margin: 1em;
-  display: inline-block;
-}
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 :root {
@@ -19,6 +6,28 @@ form div {
   --light-color: rgb(210, 228, 203);
   --success-color: rgb(0, 255, 255);
   --error-color: rgb(141, 0, 0);
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+label {
+  display: block;
+}
+
+nav a {
+  color: rgb(1, 86, 0);
+  text-decoration: none;
+  display: inline-block;
+  margin: 1em;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
 }
 
 * {
@@ -30,6 +39,7 @@ form div {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
+  background-image: url("https://unsplash.com/photos/3tGxWVuSRBk");
   background: var(--light-color);
   margin: 20px;
 }
@@ -39,6 +49,7 @@ ul {
 }
 
 a {
+  color: rgb(1, 86, 0);
   text-decoration: none;
 }
 
@@ -49,6 +60,15 @@ a {
   color: var(--dark-color-a);
   border: 0;
   font-size: 17px;
+}
+.homeMsg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(1, 86, 0);
 }
 
 /* Chat Page */

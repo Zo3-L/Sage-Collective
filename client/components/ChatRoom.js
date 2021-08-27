@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import io from "socket.io-client";
+// import io from "socket.io-client";
 const faker = require("faker");
 
-const socket = io.connect("http://localhost:8080");
+// const socket = io.connect("http://localhost:8080");
 
 const ChatRoom = (props) => {
   const { username } = props;
+  const anon = faker.random.word();
 
   return (
     <div className="join-container">
@@ -15,8 +16,8 @@ const ChatRoom = (props) => {
           <div className="form-control">
             <label htmlFor="username">Username</label>
             <select name="username" id="username">
-              <option value="UserName">{username}</option>
-              <option value="Anon">Anon-{faker.random.word()}</option>
+              <option value={`${username}`}>{username}</option>
+              <option value={`Anon-${anon}`}>Anon-{anon}</option>
             </select>
           </div>
           <div className="form-control">

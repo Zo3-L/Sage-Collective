@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
-// import io from "socket.io-client";
 const faker = require("faker");
-
-// const socket = io.connect("http://localhost:8080");
 
 const ChatRoom = (props) => {
   const { username } = props;
@@ -12,13 +9,20 @@ const ChatRoom = (props) => {
   return (
     <div className="join-container">
       <main className="join-main">
+        {/* <form action="/chat"> */}
         <form action="chat.html">
           <div className="form-control">
             <label htmlFor="username">Username</label>
-            <select name="username" id="username">
-              <option value={`${username}`}>{username}</option>
-              <option value={`Anon-${anon}`}>Anon-{anon}</option>
-            </select>
+            {!!username ? (
+              <select name="username" id="username">
+                <option value={`${username}`}>{username}</option>
+                <option value={`Anon-${anon}`}>Anon-{anon}</option>
+              </select>
+            ) : (
+              <select name="username" id="username">
+                <option value={`Anon-${anon}`}>Anon-{anon}</option>
+              </select>
+            )}
           </div>
           <div className="form-control">
             <label htmlFor="room">Room</label>
@@ -42,6 +46,7 @@ const ChatRoom = (props) => {
 
 const mapState = (state) => {
   return {
+    state,
     username: state.auth.username,
   };
 };

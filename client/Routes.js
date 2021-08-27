@@ -4,6 +4,7 @@ import { withRouter, Route, Switch, Redirect } from "react-router-dom";
 import { Login, Signup } from "./components/AuthForm";
 import Home from "./components/Home";
 import ChatRoom from "./components/ChatRoom";
+import Chat from "./components/Chat";
 import { me } from "./store";
 
 /**
@@ -31,6 +32,8 @@ class Routes extends Component {
             <Route path="/" exact component={Login} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
+            <Route path="/chatroom" component={ChatRoom} />
+            <Route path="/chat" component={Chat} />
             <Redirect to="/home" />
           </Switch>
         )}

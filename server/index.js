@@ -20,7 +20,7 @@ const init = async () => {
       await db.sync();
     }
 
-    const admin = "Community Admin";
+    const admin = "Sage Collective Admin";
 
     //run when client connects
     io.on("connection", (socket) => {
@@ -32,10 +32,7 @@ const init = async () => {
         const user = userJoin(socket.id, username, room);
         socket.join(user.room);
         //welcome current user
-        socket.emit(
-          "message",
-          formatMessage(admin, "Welcome to Sage Collective!")
-        );
+        socket.emit("message", formatMessage(admin, `Welcome to ${room}`));
         //broadcast when a user connects
         socket.broadcast
           .to(user.room)
